@@ -1,0 +1,318 @@
+body {
+    background-image: url('Background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh; /* Yüksekliği tam ekran yapmaya yarayan kod. */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    flex-direction: row;
+    display: flex;
+}
+
+header .container {
+    flex-direction: row;
+    gap: 200px;
+    display: flex;
+}
+
+.headerleft {
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    gap: 25px;
+    display: flex;
+}
+
+.headerleft img {
+    height: 50px;
+    width: auto;
+}
+
+.headerleft a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400px;
+    text-decoration: none;
+    text-align: center;
+    color: rgb(130, 75, 3);
+}
+
+.headerright {
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+    gap: 50px;
+}
+
+.headerright a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-decoration: none;
+    color: rgb(130, 75, 3);
+}
+
+.headerright button {
+    background-color: rgb(219, 140, 14);
+    border-radius: 30px;
+    border-style: solid;
+    border-color: rgb(223, 152, 18);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: white;
+    padding: 10px 30px;
+    align-self: center;
+}
+
+.hamburger {
+    flex-direction: column;
+    cursor: pointer;
+    display: none;
+}
+
+.hamburger span {
+    background-color: rgb(130, 75, 3);
+    margin: 4px 0;
+    height: 3px;
+    width: 25px;
+}
+
+#menu-toggle {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+
+.close-menu {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .headerright {
+        background-color: rgb(249, 217, 169);
+        position: absolute;
+        flex-direction: column;
+        text-align: center;
+        display: none;
+        top: 0;
+        right: 0;
+        z-index: 500;
+        width: 50%;
+        padding: 20px;
+    }
+
+    .headerright div {
+        flex-direction: column;
+        display: flex;
+        padding-top: 20px;
+    }
+
+    .headerright div a {
+        padding: 20px 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    #menu-toggle:checked + .hamburger + .headerright {
+        display: flex;
+    }
+
+    #menu-toggle:checked + .hamburger + .headerright .close-menu {
+        font-size: 24px;
+        position: absolute;
+        cursor: pointer;
+        color: rgb(130, 75, 3);
+        top: 10px;
+        right: 10px;
+        display: block;
+    }
+
+    .close-menu {
+        display: none;
+    }
+
+    section {
+        flex-direction: column !important;
+        display: flex;
+    }
+
+    .hero {
+        flex-direction: column !important;
+        width: 100%;
+        display: flex;
+    }
+
+    .hero .leftside {
+        flex-direction: column !important;
+        display: flex;
+    }
+
+    .experience .informations {
+        gap: 5px;
+        display: flex;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Burayıda hazırlayabilirim */
+}
+
+section {
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+    padding-top: 55px;
+    margin-bottom: 0px;
+}
+
+.hero {
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+    gap: 100px;
+}
+
+.hero .rightside img {
+    border: 2px solid orange;
+    border-radius: 20px;
+    transform: rotate(5deg);
+    height: auto;
+    width: 500px;
+}
+
+.hero header {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    color: rgb(102, 68, 6);
+}
+
+.hero p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 60px;
+    color: rgb(230, 157, 20);
+    margin: 0px;
+}
+
+.hero .leftside {
+    justify-content: center;
+    flex-direction: column;
+    align-items: start;
+    display: flex;
+}
+
+.hero .leftside header {
+    padding-left: 0px;
+}
+
+.leftside .text {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 200;
+    color: black;
+}
+
+.leftside .social {
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+    padding-top: 60px;
+}
+
+.leftside button {
+    background-color: white;
+    border-radius: 20px;
+    border-color: orange;
+    font-size: 20px;
+    color: orange;
+    width: 250px;
+    height: 50px;
+}
+
+.social {
+    justify-content: center;
+    flex-direction: row;
+    text-align: start;
+    display: flex;
+    gap: 20px;
+}
+
+.social i {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.social .icon button {
+    background-color: white;
+    border-radius: 40px;
+    border-color: orange;
+    font-size: 20px;
+    color: orange;
+    width: 45px;
+    height: 45px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.social .icon {
+    justify-content: center;
+    flex-direction: row;
+    text-align: start;
+    display: flex;
+    gap: 10px;
+}
+
+.experience {
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+    padding-top: 20px;
+    margin-top: 0px;
+}
+
+.experience .informations {
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+    gap: 20px;
+}
+
+.experience .informations h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 250px;
+    font-size: 75px;
+    color: orange;
+}
+
+.experience .informations p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 250px;
+    font-size: 20px;
+}
+
+.experience .informations .vertical {
+    color: rgb(77, 77, 77);
+    width: 2px;
+    height: 10px;
+}
